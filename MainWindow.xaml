@@ -1,0 +1,34 @@
+﻿<Window x:Class="kalkulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kalkulator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Plik">
+                <MenuItem Header="nowy" Click="nowyClick"></MenuItem>
+                <MenuItem Header="zapisz" Click="zapiszClick" ></MenuItem>
+               
+                <MenuItem Header="oblicz" Click="ObliczClick" ></MenuItem>
+            </MenuItem>
+            <MenuItem Header="widok">
+                <MenuItem x:Name="kolor" Header="kolor" IsCheckable="True" IsChecked="False" Click="ZielonyNiebieskiClick" ></MenuItem>
+                <MenuItem x:Name="font" Header="czcionka" IsCheckable="True" IsChecked="False" Click="MalyDuzyClick" ></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Pomoc">
+                <MenuItem Header="O programie" Click="ProgramClick" ></MenuItem>
+                <MenuItem Header="Instrukcja" Click="InstrukcjaClick" ></MenuItem>
+            </MenuItem>
+        </Menu>
+        <TextBox x:Name="a" Text="0"  Height="40" DockPanel.Dock="Top"></TextBox>
+        <TextBox x:Name="b" Text="0" Height="40" DockPanel.Dock="Top"></TextBox>
+        <Button Width="150"  Height="40" DockPanel.Dock="Top" Click="NWDclick" >NWD</Button>
+        <Button Width="150" Height="40" DockPanel.Dock="Top" Click="NWWclick" >NWW</Button>
+        <TextBlock x:Name="wynik"></TextBlock>
+        
+
+    </DockPanel>
+</Window>
